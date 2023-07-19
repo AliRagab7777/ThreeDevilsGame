@@ -97,4 +97,5 @@ public class ImageObject implements GameObject{
     public void draw(Graphics canvas) {
         
     }
+    
 }

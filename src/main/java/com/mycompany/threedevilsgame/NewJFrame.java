@@ -3,18 +3,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.threedevilsgame;
+import java.awt.Image;
+
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author mmema
  */
 public class NewJFrame extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form NewJFrame
      */
     public NewJFrame() {
         initComponents();
+        ImageIcon icon = new ImageIcon("3lwa_chess.jpg");            //adding Icon
+        this.setIconImage(icon.getImage());
+  
     }
 
     /**
@@ -27,39 +36,57 @@ public class NewJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         myPanel1 = new com.mycompany.threedevilsgame.MyPanel();
+        StartGmae = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
-        javax.swing.GroupLayout myPanel1Layout = new javax.swing.GroupLayout(myPanel1);
-        myPanel1.setLayout(myPanel1Layout);
-        myPanel1Layout.setHorizontalGroup(
-            myPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 811, Short.MAX_VALUE)
-        );
-        myPanel1Layout.setVerticalGroup(
-            myPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
-        );
+        myPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        StartGmae.setBackground(new java.awt.Color(204, 255, 204));
+        StartGmae.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        StartGmae.setForeground(new java.awt.Color(0, 0, 0));
+        StartGmae.setText("Play");
+        StartGmae.setOpaque(true);
+        StartGmae.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartGmaeActionPerformed(evt);
+            }
+        });
+        myPanel1.add(StartGmae, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, 168, 97));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\mmema\\Downloads\\bat3.jpg")); // NOI18N
+        myPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -80, 800, 730));
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
-                .addComponent(myPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(myPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(myPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+            .addComponent(myPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void StartGmaeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartGmaeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StartGmaeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,11 +119,19 @@ public class NewJFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new NewJFrame().setVisible(true);
+               
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton StartGmae;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private com.mycompany.threedevilsgame.MyPanel myPanel1;
     // End of variables declaration//GEN-END:variables
 }
+

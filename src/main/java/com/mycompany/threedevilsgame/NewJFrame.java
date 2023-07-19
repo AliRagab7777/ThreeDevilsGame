@@ -59,7 +59,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         myPanel1.add(StartGmae, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, 168, 97));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\mmema\\OneDrive\\Documents\\NetBeansProjects\\ThreeDevilsGame\\bat3.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/threedevilsgame/bat3.jpg"))); // NOI18N
         myPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -80, 800, 730));
 
         jMenu1.setText("File");
@@ -123,7 +123,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
     }
-    
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton StartGmae;
@@ -133,5 +133,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private com.mycompany.threedevilsgame.MyPanel myPanel1;
     // End of variables declaration//GEN-END:variables
+
 }
 
